@@ -1,0 +1,54 @@
+2014-10-20 18:56:39 Error: [MissingControllerException] Controller class PlanestudiosController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanestudiosController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/Planestudios
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-20 18:56:44 Error: [MissingControllerException] Controller class PlanestudioController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanestudioController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/Planestudio
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-20 19:57:39 Error: [MissingControllerException] Controller class MateriasController could not be found.
+Exception Attributes: array (
+  'class' => 'MateriasController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/materias
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-20 19:57:43 Error: [MissingControllerException] Controller class MateriasController could not be found.
+Exception Attributes: array (
+  'class' => 'MateriasController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/materias
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-20 19:57:58 Error: [MissingControllerException] Controller class MateriasController could not be found.
+Exception Attributes: array (
+  'class' => 'MateriasController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/materias
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-20 20:01:57 Error: [MissingControllerException] Controller class MateriasController could not be found.
+Exception Attributes: array (
+  'class' => 'MateriasController',
+  'plugin' => NULL,
+)
+Request URL: /sistema_escolar/materias/add
+Stack Trace:
+#0 /var/www/sistema_escolar/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
