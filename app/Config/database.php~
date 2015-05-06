@@ -69,8 +69,8 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'florezita',
-		'database' => 'universidad',
+		'password' => 'root',
+		'database' => 'localhost',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

@@ -6,7 +6,8 @@ class UsuariosController extends AppController {
 
 	public $components = array('Paginator');
 
-	
+
+     	
 	public function login($usuario=null,$password=null){
 		$this->Usuario->recursive=0;
 		
@@ -82,6 +83,9 @@ class UsuariosController extends AppController {
 
 
 	public function add() {
+		if(!$this->Session->check("usuario")){
+		$this->redirect(array('controller'=>'usuarios','action'=>'login'));
+		}
 		if ($this->request->is('post')) {
 
 			$this->request->data['Usuario']['usuario_id'] = $this->Session->read('usuario.id');
