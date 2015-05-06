@@ -68,6 +68,12 @@
 			&nbsp;
 		</dd>
 	</dl>
+	<div class="actions">
+		<li><?php echo $this->Html->link(__('PDF'), array('action'=>'viewPdf', $cargo['Cargo']['id']));?></li> 	
+	<li><?php echo $this->Html->link(__('Facturar'), array('action' => 'edit', $cargo['Cargo']['id'])); ?> </li>
+
+	</div>
+	
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

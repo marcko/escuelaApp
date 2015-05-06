@@ -1,7 +1,7 @@
 
 
 <div class="tetramestres form">
-<?php echo $this->Form->create(); ?>
+<?php echo $this->Form->create('Alumno'); ?>
 	<fieldset>
 		<legend>Buscar alumno por numero de control:</legend>
                 <input type="text" name="data[Alumno][buscar]" >
