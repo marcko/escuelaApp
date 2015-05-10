@@ -9,71 +9,93 @@
 		-->
 		<dt><?php echo __('Alumno'); ?></dt>
 		<dd>
-			<?php echo $cargo['Alumno']['nombre']; ?>
+			<?php 
+			$nombreAlumno = $cargo['Alumno']['nombre']; 
+			echo  $nombreAlumno?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['created']); ?>
+			<?php 
+            $creado = $cargo['Cargo']['created'];
+			echo  $creado  ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Concepto'); ?></dt>
 		<dd>
-			<?php echo $cargo['Concepto']['nombre']; ?>
+			<?php
+				$concepto = $cargo['Concepto']['nombre'];
+			 echo  $concepto ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Fecha Pago'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['fecha_pago']); ?>
+			<?php 
+			$fechaPago = $cargo['Cargo']['fecha_pago'];
+			echo $fechaPago; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Descripcion'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['descripcion']); ?>
+			<?php 
+			$descripcion = $cargo['Cargo']['descripcion'];
+			echo 	$descripcion ; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Modified'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['modified']); ?>
+
+			<?php 
+			$modificado = $cargo['Cargo']['modified'];
+			echo $modificado   ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Status'); ?></dt>
 		<dd>
 	<!--		<?php// echo h($cargo['Cargo']['status']); ?>
 			&nbsp;
-	--><?php if ($cargo['Cargo']['status'] == 1){
-			echo 'Pendiente';}
-		else{
-			echo 'Pagado';
-		
-				
-		
-		}
+	--><?php 
+	$status;
+ if ($cargo['Cargo']['status'] == 1){
+           echo $status = 'Pendiente';}
+        else{
+           echo $status = 'Pagado';
+        
+                
+        
+        };
 	?>
+
 
 		</dd>
 		<dt><?php echo __('Forma Pago'); ?></dt>
 		<dd>
-			<?php echo $cargo['FormaPago']['nombre']; ?>
+			<?php 
+			$formaPago = $cargo['FormaPago']['nombre'];
+			echo $formaPago; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Abono'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['abono']); ?>
+			<?php 
+			$abono = $cargo['Cargo']['abono'];
+			echo  $abono; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Cargo'); ?></dt>
 		<dd>
-			<?php echo h($cargo['Cargo']['cargo']); ?>
+			<?php 
+			$cargos = $cargo['Cargo']['cargo'];
+			echo $cargos; ?>
 			&nbsp;
 		</dd>
 	</dl>
 	<div class="actions">
 		<li><?php echo $this->Html->link(__('PDF'), array('action'=>'viewPdf', $cargo['Cargo']['id']));?></li> 	
-	<li><?php echo $this->Html->link(__('Facturar'), array('action' => 'edit', $cargo['Cargo']['id'])); ?> </li>
-
-	</div>
+			<li><?php echo $this->Html->link(__('Facturar'), array('action'=>'send', $cargo['Cargo']['id']));?></li> 
+			  </li>
 	
+	</div>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

@@ -308,23 +308,46 @@ class CargosController extends AppController {
 	}
 
 
-
-public function send($ultimo_id=null, $nombre_a=null, $alumno_id=null,
-			     $nombre_concepto=null,$abononuevo=null, $nombre_forma=null,$fecha_fac=null,$rfc=null){
+public function send($id=null){
+			if (!$this->Cargo->exists($id)) {
+			throw new NotFoundException(__('cargo invalido'));
+		}
+		$options = array('conditions' => array('Cargo.' . $this->Cargo->primaryKey => $id));
+		$cargo = $this->Cargo->find('first',$options);
 		
+		//$cargo = $this->Cargo->Concepto->find('list');
+		$status;
+ if ($cargo['Cargo']['status'] == 1){
+            $status = 'Pendiente';}
+        else{
+            $status = 'Pagado';
+        
+                
+        
+        };
+
+$nombre = $cargo['Alumno']['nombre'];
+$created =$cargo['Cargo']['created'];
+$concepto = $cargo['Concepto']['nombre'];
+$fechaPago = $cargo['Cargo']['fecha_pago'];
+$descripcion = $cargo['Cargo']['descripcion'];
+$modified = $cargo['Cargo']['modified'];
+
+$formaPago =  $cargo['FormaPago']['nombre'];  
+$abono = $cargo['Cargo']['abono'];
+$cargo = $cargo['Cargo']['cargo'];
+ $mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$status,$formaPago,$abono,$cargo);
+
 		$Email = new CakeEmail();
-		
-	$mensaje=("Favor de crear factura con el folio # ".$ultimo_id.",  A Favor de ".$nombre_a.
-		  ",  con Numero de Control ".$alumno_id.",  y RFC ".$rfc.",  por el Concepto de ".$nombre_concepto.
-		  ",  por la cantidad de ".$abononuevo.",  quien Pago de Forma ".$nombre_forma.
-		  ",  con fecha de ".$fecha_fac);
-
-		
+			 
 				//codigo de correo	
 				$Email->config('gmail');
-				$Email->to('facturaunijosemartinez@gmail.com');
-				$Email->subject("Factura Pendiente De Enviar");
-				$Email->send($mensaje);
+				$Email->template('welcome');
+				$Email->emailFormat('html');
+				$Email->viewVars(array("value" => $mensaje));
+				$Email->to('marco.itnl@hotmail.com');
+				$Email->subject("Prueba de correo");
+				$Email->send();
 								
 			/*	$this->Email->delivery = 'smtp';
 				if ($this->Email->send()) {
