@@ -133,6 +133,6 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 $tcpdf->SetTextColor(0, 0, 0);
 $tcpdf->SetFont($textfont, '', 10);
 
-$filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
-$tcpdf->Output($filename, 'D');
+//$filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
+$tcpdf->Output('prueba.pdf', 'D');
 ?>
