@@ -69,10 +69,11 @@
   <li><?php echo $this->Html->link(__('Agregar Carrera'), array('action' => 'add')); ?> </li>
  </ul>
 </div>
-<div class="carreras view">
+
+  <!--
+  <div class="carreras view">
 <h2>Carrera</h2>
  <dl>
-  
   <dt>Nombre</dt>
   <dd>
    <?php echo $carrera['Carrera']['nombre']; ?>
@@ -212,3 +213,4 @@
  </ul>
 </div>
 
+-->
