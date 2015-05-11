@@ -109,16 +109,23 @@ App::import('Vendor', 'tcpdf', array('file' => 'tcpdf'.DS.'tcpdf.php'));
 App::uses('CakeTime', 'Utility');
 $date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
 
-$tcpdf = new TCPDF();
+$tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 $tcpdf->SetAuthor("marco");
 $textfont = 'helvetica';
+$tcpdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$tcpdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$tcpdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 $tcpdf->SetAutoPageBreak( false );
 $tcpdf->setHeaderFont(array($textfont,'',20));
 $tcpdf->xheadercolor = array(150,0,0);
 $tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
-
+if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $tcpdf->setLanguageArray($l);
+}
 
 // add a page (required with recent versions of tcpdf)
+$tcpdf->lastPage();
 $tcpdf->AddPage();
 
 // Now you position and print your page content
