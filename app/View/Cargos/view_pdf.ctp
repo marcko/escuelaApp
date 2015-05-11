@@ -125,7 +125,7 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 }
 
 // add a page (required with recent versions of tcpdf)
-$tcpdf->lastPage();
+
 $tcpdf->AddPage();
 
 // Now you position and print your page content
