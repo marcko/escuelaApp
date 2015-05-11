@@ -49,9 +49,6 @@ img{
 
 </style>';
 
-$tcpdf->writeHTML($html, true, false, true, false, '');
-
-$tcpdf->AddPage();
 $html .='
 
 <h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
@@ -103,9 +100,6 @@ $html .='
     </tbody>
 </table>
 ';
-$tcpdf->writeHTML($html, true, false, true, false, '');
-$tcpdf->lastPage();
-$tcpdf->AddPage();
 
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
@@ -132,6 +126,7 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 // add a page (required with recent versions of tcpdf)
 
 $tcpdf->AddPage();
+$tcpdf->writeHTML($html, true, false, true, false, '');
 
 // Now you position and print your page content
 $tcpdf->SetTextColor(0, 0, 0);
