@@ -105,6 +105,7 @@ $tcpdf->SetTextColor(0, 0, 0);
 $tcpdf->SetFont($textfont, '', 10);
 $tcpdf->writeHTML($html, true, false, true, false, '');
 $filename = 'Cargo_'.$fechaPago.'.pdf';
-$tcpdf->Output($filename, 'D');
+ob_end_clean();
+echo $tcpdf->Output($filename, 'D');
 
 ?>
