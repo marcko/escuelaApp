@@ -20,6 +20,7 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
+$tcpdf->AddPage();
 $html= '
 <style>
 th {
@@ -48,8 +49,8 @@ img{
 
 
 </style>';
-
-$html .='
+$tcpdf->writeHTML($html, true, false, true, false, '');
+$html ='
 
 <h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
 <img src="img/logo.jpg" alt="HTML tutorial" style="width:60px;height:60px;margin-left:20px;"></h1>';
@@ -100,6 +101,7 @@ $html .='
     </tbody>
 </table>
 ';
+$tcpdf->writeHTML($html, true, false, true, false, '');
 
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
@@ -125,8 +127,6 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 
 // add a page (required with recent versions of tcpdf)
 
-$tcpdf->AddPage();
-$tcpdf->writeHTML($html, true, false, true, false, '');
 
 // Now you position and print your page content
 $tcpdf->SetTextColor(0, 0, 0);
