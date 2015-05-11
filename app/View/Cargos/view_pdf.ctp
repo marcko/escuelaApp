@@ -4,6 +4,26 @@ App::uses('CakeTime', 'Utility');
 $date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
 
 $tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$tcpdf->SetAuthor("marco");
+$textfont = 'helvetica';
+$tcpdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$tcpdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$tcpdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+$tcpdf->SetAutoPageBreak( false );
+$tcpdf->setHeaderFont(array($textfont,'',20));
+$tcpdf->xheadercolor = array(150,0,0);
+$tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
+if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $tcpdf->setLanguageArray($l);
+}
+
+// add a page (required with recent versions of tcpdf)
+
+
+// Now you position and print your page content
+$tcpdf->SetTextColor(0, 0, 0);
+$tcpdf->SetFont($textfont, '', 10);
 ////////////////////////////////////// Get course data //////////////////////////////////////
  $status;
  if ($cargo['Cargo']['status'] == 1){
@@ -112,26 +132,7 @@ $tcpdf->writeHTML($html, true, false, true, false, '');
 
 ////////////////////////////////////// CakePHP interaction ////////////////////////////////////// 
 
-$tcpdf->SetAuthor("marco");
-$textfont = 'helvetica';
-$tcpdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-$tcpdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-$tcpdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-$tcpdf->SetAutoPageBreak( false );
-$tcpdf->setHeaderFont(array($textfont,'',20));
-$tcpdf->xheadercolor = array(150,0,0);
-$tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
-    $tcpdf->setLanguageArray($l);
-}
 
-// add a page (required with recent versions of tcpdf)
-
-
-// Now you position and print your page content
-$tcpdf->SetTextColor(0, 0, 0);
-$tcpdf->SetFont($textfont, '', 10);
 
 //$filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
 $tcpdf->Output('prueba.pdf', 'D');
