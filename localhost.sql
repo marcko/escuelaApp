@@ -5567,6 +5567,7 @@ INSERT INTO `estados` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+
 -- Estructura de tabla para la tabla `forma_pagos`
 --
 

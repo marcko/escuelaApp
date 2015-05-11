@@ -38,7 +38,7 @@ class CargosController extends AppController {
 		//print_r($this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>1) ) ));
 		//	echo "</pre>";die;	
 	}
-		function viewPdf($id = null){
+	public function viewPdf($id = null){
         	if (!$this->Cargo->exists($id)) {
 			throw new NotFoundException(__('cargo invalido'));
 		}
@@ -48,6 +48,14 @@ class CargosController extends AppController {
             );
 		 $options = array('conditions' => array('Cargo.' . $this->Cargo->primaryKey => $id));
 		$this->set('cargo', $this->Cargo->find('first', $options));
+	}
+		public function viewPdf2(){
+		 $this->pdfConfig = array(
+            'orientation' => 'portrait',
+            'filename' => 'Cargo'
+            );
+		
+		$this->set('cargo', $this->Cargo->find('all'));
 	}
 
 
