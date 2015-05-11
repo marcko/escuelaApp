@@ -1,4 +1,9 @@
 <?php
+App::import('Vendor', 'tcpdf', array('file' => 'tcpdf'.DS.'tcpdf.php'));
+App::uses('CakeTime', 'Utility');
+$date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
+
+$tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 ////////////////////////////////////// Get course data //////////////////////////////////////
  $status;
  if ($cargo['Cargo']['status'] == 1){
@@ -20,7 +25,7 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
-
+$tcpdf->AddPage();
 $html= '
 <style>
 th {
@@ -106,11 +111,7 @@ $tcpdf->writeHTML($html, true, false, true, false, '');
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
 ////////////////////////////////////// CakePHP interaction ////////////////////////////////////// 
-App::import('Vendor', 'tcpdf', array('file' => 'tcpdf'.DS.'tcpdf.php'));
-App::uses('CakeTime', 'Utility');
-$date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
 
-$tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 $tcpdf->SetAuthor("marco");
 $textfont = 'helvetica';
 $tcpdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
