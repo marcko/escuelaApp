@@ -135,5 +135,6 @@ $tcpdf->writeHTML($html, true, false, true, false, '');
 
 
 //$filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
-$tcpdf->Output('prueba.pdf', 'D');
+ob_end_clean();
+echo $tcpdf->Output('prueba.pdf', 'D');
 ?>
