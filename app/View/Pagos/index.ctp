@@ -10,7 +10,7 @@
 </style>
 
 <div id = "searchDiv">
-	<form id = "formBuscar" method = "post" action = "/sistema_escolar2/pagos/search">
+	<form id = "formBuscar" method = "post" action = "/escuelaApp/pagos/search">
 		Buscar 
 		<input type = "text" name = "termino" id = "termBox" required="true"/>
 	 	en
@@ -24,7 +24,7 @@
 		<input type = "submit" value = "Buscar" />
 	</form>
     <br/>
-    <form id = "formAgregar" method = "post" action = "/sistema_escolar2/pagos/add">
+    <form id = "formAgregar" method = "post" action = "/escuelaApp/pagos/add">
         <input type = "submit" value = "Agregar pago" />
 	</form>
     <br/>
