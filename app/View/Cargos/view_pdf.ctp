@@ -20,7 +20,7 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
-
+$pdf->AddPage();
 $html= '
 <style>
 th {
@@ -49,6 +49,10 @@ img{
 
 
 </style>';
+
+$tcpdf->writeHTML($html, true, false, true, false, '');
+
+$tcpdf->AddPage();
 $html .='
 
 <h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
@@ -100,7 +104,9 @@ $html .='
     </tbody>
 </table>
 ';
-
+$tcpdf->writeHTML($html, true, false, true, false, '');
+$tcpdf->lastPage();
+$tcpdf->AddPage();
 
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
@@ -131,7 +137,7 @@ $tcpdf->AddPage();
 // Now you position and print your page content
 $tcpdf->SetTextColor(0, 0, 0);
 $tcpdf->SetFont($textfont, '', 10);
-$tcpdf->writeHTML($html, true, false, true, false, '');
+
 $filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
 $tcpdf->Output($filename, 'D');
 ?>
