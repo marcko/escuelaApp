@@ -20,7 +20,6 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
-$tcpdf->AddPage();
 $html= '
 <style>
 th {
