@@ -11,6 +11,7 @@
 		#echo $this->Form->input('fecha_nac',array('label'=>'Fecha de nacimiento','type'=>'input','placeholder'=>'Formato yyyy-mm-dd'));
 		echo $this->Form->input('nacionalidad');
 		echo $this->Form->input('rfc');
+		echo $this->Form->input('matricula',array('label'=>'Matricula'));
 		echo "Fecha de nacimiento";
 		echo "<input type='text' name='data[Alumno][fecha_nac]' placeholder='Formato yyyy-mm-dd'>";
 		echo $this->Form->input('estado_civil',array('label'=>'Estado civil','empty'=>
@@ -23,8 +24,11 @@
 		echo $this->Form->input('tel_trabajo');
 		echo $this->Form->input('tel_oficina');
 		echo $this->Form->input('tel_movil');
+		echo $this->Form->input('correo');
 		echo $this->Form->input('carrera_id');
-		echo $this->Form->input('correo');?></fieldset>
+		echo $this->Form->input('cuota_inscripcion',array('label'=>'Cuota Inscripcion'));
+		echo $this->Form->input('cuota_mensualidad',array('label'=>'Cuota Mensualidad'));?>
+		</fieldset>
 		<fieldset>
 		<legend><?php echo __('Datos laborales'); ?></legend>
 		<?php

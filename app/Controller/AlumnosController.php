@@ -50,7 +50,7 @@ class AlumnosController extends AppController {
 				$mayusculas = strtoupper($control); #pasar clave a mayuscula
 				$mayusculas="'".$mayusculas."'";
 				
-				$datos =$this->Alumno->find('all',array('conditions'=>'Alumno.clave='.$mayusculas));
+				$datos =$this->Alumno->find('all',array('conditions'=>'Alumno.matricula='.$mayusculas));
 				
 				$this->set('datos',$datos);
 				$this->set('bandera_busqueda',$this->request->data['Alumno']['bandera']);

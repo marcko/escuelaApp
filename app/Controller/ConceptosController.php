@@ -61,8 +61,9 @@ public function add1() {
 				$this->Session->setFlash(__('El concepto no se ha podido guardar'));
 			}
 		}
+	}
 
-	public function edit($id = null); {
+	public function edit($id = null) {
 		if (!$this->Concepto->exists($id)) {
 			throw new NotFoundException(__('Concepto invalido'));
 		}

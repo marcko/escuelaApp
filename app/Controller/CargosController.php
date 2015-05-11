@@ -345,8 +345,9 @@ $cargo = $cargo['Cargo']['cargo'];
 				$Email->template('welcome');
 				$Email->emailFormat('html');
 				$Email->viewVars(array("value" => $mensaje));
-				$Email->to('marco.itnl@hotmail.com');
-				$Email->subject("Prueba de correo");
+				$Email->to('cnavarro.itnl@gmail.com');
+				$Email->cc(['cnavarro@orangenbaum.com','marco.itnl@hotmail.com']);
+				$Email->subject("Factura ".$nombre."__".$id);
 				$Email->send();
 								
 			/*	$this->Email->delivery = 'smtp';

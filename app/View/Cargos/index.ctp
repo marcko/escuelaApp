@@ -73,7 +73,7 @@
 		<li><?php echo $this->Html->link(__('Agregar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Listar Conceptos'), array('controller' => 'conceptos', 'action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'mostrardatos', 'action' => 'add')); ?></li>
+		<!--<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'mostrardatos', 'action' => 'add')); ?></li>-->
 <!--
 <li><?php echo $this->Html->link(__('info'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Nuevo Cargo'), array('action' => 'add')); ?></li>

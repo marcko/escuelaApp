@@ -3,7 +3,7 @@
 <div class="tetramestres form">
 <?php echo $this->Form->create('Alumno'); ?>
 	<fieldset>
-		<legend>Buscar alumno por numero de control:</legend>
+		<legend>Buscar alumno por matricula:</legend>
                 <input type="text" name="data[Alumno][buscar]" >
 		<input type="hidden" name="data[Alumno][bandera]" value="1">
 	</fieldset>
@@ -18,6 +18,9 @@
 			<tr><td colspan='2'><center><b>Datos personales</b></center></td></tr>
 			<tr>
 				<td><b>Numero de control </b></td><td>".$datos[0]['Alumno']['clave']."</td>
+			</tr>
+			<tr>
+				<td><b>Matricula </b></td><td>".$datos[0]['Alumno']['matricula']."</td>
 			</tr>
 			<tr>
 				<td><b>Nombre </b></td><td>".$datos[0]['Alumno']['nombre']." ".$datos[0]['Alumno']['ap_pat']." ".$datos[0]['Alumno']['ap_mat']."</td>
