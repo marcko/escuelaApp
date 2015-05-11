@@ -12,7 +12,7 @@
 <div id = "searchDiv">
 	<form id = "formBuscar" method = "post" action = "/sistema_escolar2/pagos/search">
 		Buscar 
-		<input type = "text" name = "termino" id = "termBox" />
+		<input type = "text" name = "termino" id = "termBox" required="true"/>
 	 	en
 		<select id = "combobox" name = "combobox">
 			<option value = "1"> Concepto de Pago </option>
