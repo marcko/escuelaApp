@@ -62,7 +62,7 @@ $html .='
             <th>'.$nombre.'</th>
            </tr>
            <tr class="active">
-            <th><h3>Created</h3></th>
+            <th><h3>Creado</h3></th>
             <th>'.$created.'</th>
            </tr>
            <tr class="active">
@@ -78,7 +78,7 @@ $html .='
             <th>'.$descripcion.'</th>
            </tr>
            <tr class="active">
-            <th><h3>Modified</h3></th>
+            <th><h3>Modificado</h3></th>
             <th>'.$modified.'</th>
            </tr>
            <tr class="active">
