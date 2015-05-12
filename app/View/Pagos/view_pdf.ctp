@@ -59,7 +59,7 @@ h2{
 }
 .firmas{
 
-	 background-color:#F4F4F4;
+
 }
 .imagen{
     width:100%;
