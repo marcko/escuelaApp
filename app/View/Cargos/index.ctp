@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th>Id</th>
+			<th>matricula</th>
 			<th>alumno</th>
 			<th>creado</th>
 			<th>concepto</th>
@@ -23,7 +23,7 @@
 	
 	?>
 	<tr>
-		<td><?php echo $cargo['Cargo']['id']; ?>&nbsp;</td>
+		<td><?php echo $cargo['Alumno']['matricula']; ?>&nbsp;</td>
 		<td>
 		<!--	<?php echo $this->Html->link($cargo['Alumno']['nombre'], array('controller' => 'alumnos', 'action' => 'view', $cargo['Alumno']['id'])); ?> -->
 		<?php echo $cargo['Alumno']['nombre']; ?>&nbsp;		

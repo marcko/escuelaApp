@@ -345,7 +345,7 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
- $mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$status,$formaPago,$abono,$cargo);
+$mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$status,$formaPago,$abono,$cargo);
 
 		$Email = new CakeEmail();
 			 
