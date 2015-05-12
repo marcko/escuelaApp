@@ -2,11 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Facturacion</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style type="text/css">
+	
+
+	.jumbotron{
+
+		background-color: white;
+	}
+</style>
 </head>
 <body>
 
-<h1>Hola que hacen</h1>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Se ha enviado la factura</h1>
+		
+	</div>
+</div>
+
 
 </body>
 </html>
