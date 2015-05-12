@@ -49,7 +49,7 @@
                     <th> Estatus </th>
                     <th> Tipo de pago </th>
                     <th> Fecha de pago </th>
-                    <th> Feca de creación </th>
+                    <th> Fecha de creación </th>
 						  <th> Externo/Interno </th>                   
                     <th> Acciones </th>
                 </thead>
@@ -75,6 +75,7 @@
 					</td>	                   
                     <td class="actions">
                         <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $value['id'])); ?>
+                         <?php echo $this->Html->link(__('PDF'), array('action' => 'viewPdf', $value['id'])); ?>
                     </td>
 				</tr>
 

@@ -47,15 +47,16 @@ class CargosController extends AppController {
             'filename' => 'Cargo' . $id
             );
 		 $options = array('conditions' => array('Cargo.' . $this->Cargo->primaryKey => $id));
-		$this->set('cargo', $this->Cargo->find('first', $options));
+		 $this->set('cargo', $this->Cargo->find('first', $options));
 	}
 		public function viewPdf2(){
+			$this->Cargo->recursive = 0;
 		 $this->pdfConfig = array(
             'orientation' => 'portrait',
             'filename' => 'Cargo'
             );
 		
-		$this->set('cargo', $this->Cargo->find('all'));
+		$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
 	}
 
 

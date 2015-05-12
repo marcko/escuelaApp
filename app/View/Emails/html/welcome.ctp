@@ -22,7 +22,6 @@ th {
 }
 h1{
     color:#F09A2E;
-    float:left;
 
 }
 .imagen{

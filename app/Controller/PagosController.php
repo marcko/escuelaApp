@@ -18,6 +18,15 @@ class PagosController extends AppController {
 		//$this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) ) ));
         $this->getCargos($condition);
 	}
+	public function viewPdf($id = null){
+		 $this->pdfConfig = array(
+            'orientation' => 'portrait',
+            'filename' => 'Pago' . $id
+            );
+		 $options = array('conditions' => array('Pago.' . $this->Pago->primaryKey => $id));
+		 $this->set('pago', $this->Pago->find('first', $options));
+
+	}
 
 	private function getCargos($condition = '') {
 		// $this->Cargo->recursive = 0;

@@ -1,29 +1,4 @@
 <?php
-App::import('Vendor', 'tcpdf', array('file' => 'tcpdf'.DS.'tcpdf.php'));
-App::uses('CakeTime', 'Utility');
-$date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
-
-$tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-$tcpdf->SetAuthor("marco");
-$textfont = 'helvetica';
-$tcpdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-$tcpdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-$tcpdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-$tcpdf->SetAutoPageBreak( false );
-$tcpdf->setHeaderFont(array($textfont,'',20));
-$tcpdf->xheadercolor = array(150,0,0);
-$tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
-    $tcpdf->setLanguageArray($l);
-}
-
-// add a page (required with recent versions of tcpdf)
-
-
-// Now you position and print your page content
-$tcpdf->SetTextColor(0, 0, 0);
-$tcpdf->SetFont($textfont, '', 10);
 ////////////////////////////////////// Get course data //////////////////////////////////////
  $status;
  if ($cargo['Cargo']['status'] == 1){
@@ -45,7 +20,7 @@ $modified = $cargo['Cargo']['modified'];
 $formaPago =  $cargo['FormaPago']['nombre'];  
 $abono = $cargo['Cargo']['abono'];
 $cargo = $cargo['Cargo']['cargo'];
-$tcpdf->AddPage();
+
 $html= '
 <style>
 th {
@@ -74,8 +49,7 @@ img{
 
 
 </style>';
-$tcpdf->writeHTML($html, true, false, true, false, '');
-$html ='
+$html .='
 
 <h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
 <img src="img/logo.jpg" alt="HTML tutorial" style="width:60px;height:60px;margin-left:20px;"></h1>';
@@ -126,15 +100,32 @@ $html .='
     </tbody>
 </table>
 ';
-$tcpdf->writeHTML($html, true, false, true, false, '');
+
 
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
 ////////////////////////////////////// CakePHP interaction ////////////////////////////////////// 
+App::import('Vendor', 'tcpdf', array('file' => 'tcpdf'.DS.'tcpdf.php'));
+App::uses('CakeTime', 'Utility');
+$date = CakeTime::convert(time(), new DateTimeZone('America/Mexico_City'));
+
+$tcpdf = new TCPDF();
+$tcpdf->SetAuthor("marco");
+$textfont = 'helvetica';
+$tcpdf->SetAutoPageBreak( false );
+$tcpdf->setHeaderFont(array($textfont,'',20));
+$tcpdf->xheadercolor = array(150,0,0);
+$tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
 
 
+// add a page (required with recent versions of tcpdf)
+$tcpdf->AddPage();
 
+// Now you position and print your page content
+$tcpdf->SetTextColor(0, 0, 0);
+$tcpdf->SetFont($textfont, '', 10);
+$tcpdf->writeHTML($html, true, false, true, false, '');
 $filename = 'Cargo_'.$nombre.'_'.$date.'.pdf';
 ob_end_clean();
-echo $tcpdf->Output($filename, 'D');
+echo $tcpdf->Output($filename, 'I');
 ?>
