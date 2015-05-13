@@ -38,7 +38,7 @@ class CargosController extends AppController  {
 	
 		$this->set('pago',$this->paginate('Pago'));
 		$this->Cargo->recursive = 0;
-			$this->Pago->recursive= 0;
+		$this->Pago->recursive= 0;
 		$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
 
         //add->set('pagos', $this->Paginator->paginate());
@@ -88,6 +88,18 @@ class CargosController extends AppController  {
             );
 		
 		$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
+	}
+		public function viewPdf3(){
+		$this->set('pago',$this->paginate('Pago'));
+		$this->Cargo->recursive = 0;
+		$this->Pago->recursive= 0;
+		 $this->pdfConfig = array(
+            'orientation' => 'portrait',
+            'filename' => 'Cargo'
+            );
+		
+		$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
+		$this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) )));
 	}
 
 

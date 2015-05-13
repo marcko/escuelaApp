@@ -1,5 +1,5 @@
-	
-	<h2><?php echo __('Cargos'); ?></h2>
+	<div>
+	<h2><?php echo __('Entrada'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -12,8 +12,10 @@
 	</tr>
 	</thead>
 	<tbody>
-	<?php  $sumaCargo=0;
-			$sumaPago=0; ?>
+	<?php  
+			$sumaCargo=0;
+			$sumaPago=0; 
+			?>
 	<?php foreach ($cargos as $cargo): 
 	
 	
@@ -34,22 +36,25 @@
 
 
 	</tr>
-	
+
+
 	<?php endforeach; ?>
+
+	<tr>
 			<?php
 				foreach ($pagos as $value) { ?>
 
-				<td> <?=  $value['Pago']['fecha_pago']?> </td>
-				<td> <?=  $value['Pago']['concepto_pago']?> </td>
-				<td> <?=  $value['Pago']['tipo_pago']?> </td>
-				<td></td>
-				<td> <?php  echo $pagod = $value['Pago']['monto'];
+				<th><?php echo $value['Pago']['fecha_pago']?> </th>
+				<th> <?php echo  $value['Pago']['concepto_pago']?> </th>
+				<th> <?php echo  $value['Pago']['tipo_pago']?> </th>
+				<th></th>
+				<th> <?php  echo $pagod = $value['Pago']['monto'];
 						$pagodnum = (int)$pagod;
 						$sumaPago = $sumaPago = $pagodnum;
 							
 						
 
-				?> </td>
+				?> </th>
 
 			
 				
@@ -61,12 +66,14 @@
 		 ?>
 
 	</tr>
+	</thead>
+	<tbody>
 <tr>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td></td>
-	<td><?php echo $sumaCargo-$sumaPago;?></td>
+	<td><h4>Total</h4></td>
 
 
 </tr>
@@ -77,10 +84,11 @@
 	<th></th>
 	<th></th>
 	<th></th>
-	<th>Total</th>
+	<th><?php echo $sumaCargo-$sumaPago;?></th>
 
 </tr>
 
-		</tbody>
-	</table>
+</tbody>
+		</table>
+		<button><?php echo $this->Html->link(__('Imprimir'), array('controller' => 'cargos', 'action' => 'viewPdf3')); ?></button>
 </div>
