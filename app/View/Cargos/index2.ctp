@@ -12,6 +12,8 @@
 	</tr>
 	</thead>
 	<tbody>
+	<?php  $sumaCargo=0;
+			$sumaPago=0; ?>
 	<?php foreach ($cargos as $cargo): 
 	
 	
@@ -24,6 +26,7 @@
 		</th>
 		<th><?php echo $cargod = $cargo['Cargo']['cargo'];
 				$cargodnum = (int)$cargod;
+				$sumaCargo = $sumaCargo+$cargodnum;
 
 		 ?>&nbsp;</th>
 		 <th></th>
@@ -40,7 +43,13 @@
 				<td> <?=  $value['Pago']['concepto_pago']?> </td>
 				<td> <?=  $value['Pago']['tipo_pago']?> </td>
 				<td></td>
-				<td> <?=  $value['Pago']['monto']?> </td>
+				<td> <?php  echo $pagod = $value['Pago']['monto'];
+						$pagodnum = (int)$pagod;
+						$sumaPago = $sumaPago = $pagodnum;
+							
+						
+
+				?> </td>
 
 			
 				
@@ -52,8 +61,25 @@
 		 ?>
 
 	</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td><?php echo $sumaCargo-$sumaPago;?></td>
 
 
+</tr>
+
+<tr>
+	
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>Total</th>
+
+</tr>
 
 		</tbody>
 	</table>
