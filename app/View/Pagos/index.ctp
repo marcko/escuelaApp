@@ -37,10 +37,8 @@
 		
 		
 		<tbody>
-		<?php 
-			foreach ($cargos as $key => $value) {  ?>
-                <thead>
-                    <th colspan = "<?= count($value[0]) ?>" style = "height: 30px;"> <center> <?= $key ?> </center> </th>
+		      <thead>
+                    
                 </thead>
             
 				<thead>
@@ -54,6 +52,9 @@
 						  <th> Externo/Interno </th>                   
                     <th> Acciones </th>
                 </thead>
+		<?php 
+			foreach ($cargos as $key => $value) {  ?>
+          
 
 		<?php
 				foreach ($cargos[$key] as $value) { ?>

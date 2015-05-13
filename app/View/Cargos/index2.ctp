@@ -40,10 +40,9 @@
 
 	<?php endforeach; ?>
 
-	<tr>
 			<?php
 				foreach ($pagos as $value) { ?>
-
+<tr>
 				<th><?php echo $value['Pago']['fecha_pago']?> </th>
 				<th> <?php echo  $value['Pago']['concepto_pago']?> </th>
 				<th> <?php echo  $value['Pago']['tipo_pago']?> </th>
@@ -59,15 +58,14 @@
 			
 				
 				
+	</tr>
 
 		<?php			
 				}
 			
 		 ?>
 
-	</tr>
-	</thead>
-	<tbody>
+
 <tr>
 	<td></td>
 	<td></td>
