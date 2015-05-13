@@ -31,4 +31,13 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+   
+
+    public function index() {
+        $this->Pago->recursive = 0;
+        //add->set('pagos', $this->Paginator->paginate());
+		//$this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) ) ));
+       $this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) ) ));
+	}
+
 }

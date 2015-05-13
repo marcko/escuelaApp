@@ -188,6 +188,36 @@ CREATE TABLE IF NOT EXISTS `cargos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
+CREATE TABLE IF NOT EXISTS `pagos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `concepto_pago` varchar(60) NOT NULL,
+  `monto` float NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1',
+  `tipo_pago` varchar(50) DEFAULT NULL,
+  `fecha_pago` datetime DEFAULT NULL,
+  `fecha_operacion` datetime NOT NULL,
+  `tipo` tinyint(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `salidas` (
+   `id` int(11) NOT NULL  AUTO_INCREMENT,
+   `fecha_pago` datetime DEFAULT NULL,
+   `concepto_pago` varchar(60) NOT NULL,
+   `tipo_pago` varchar(50) DEFAULT NULL,
+   `monto` float NOT NULL,
+   `fecha_cargo` datetime NOT NULL,
+   `descripcion` varchar(100) DEFAULT NULL,
+   `forma_pago_id` int(11) DEFAULT NULL,
+   `cargo` decimal(10,2) NOT NULL,
+    PRIMARY KEY (`id`)
+
+
+
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
 --
 -- Volcado de datos para la tabla `cargos`
 --

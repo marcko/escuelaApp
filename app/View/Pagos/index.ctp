@@ -44,6 +44,7 @@
                 </thead>
             
 				<thead>
+				<th> id</th>
                     <th> Concepto de Pago </th>
                     <th> Monto </th>
                     <th> Estatus </th>
@@ -58,6 +59,7 @@
 				foreach ($cargos[$key] as $value) { ?>
 
 				<tr>
+				<td> <?= $value['id'] ?> </td>
 					<td> <?= $value['concepto'] ?> </td>
 					<td> $<?= $value['monto'] ?> </td>
 					<td> <?= $value['estatus'] ?> </td>

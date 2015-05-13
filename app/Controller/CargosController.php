@@ -1,13 +1,16 @@
 <?php
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
+App::import('Controller','Pagos');
+
 /**
  * Cargos Controller
  *
  * @property Cargo $Cargo
  * @property PaginatorComponent $Paginator
  */
-class CargosController extends AppController {
+
+class CargosController extends AppController  {
 
 /*	Codigo de alma*/
 	public function beforefilter(){
@@ -16,24 +19,52 @@ class CargosController extends AppController {
 		}
 	}
 
-
 	public $components = array('Paginator');
-	//public $components = array('cargos');
+	//public $components = array('cargo','pago');
+	public $uses = array('Cargo','Pago');
+
 
 	public function index() {
 		$this->Cargo->recursive = 0;
 	//$this->set('cargos', $this->Paginator->paginate());
-	$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));	
+	$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
+
 		//echo "<pre>";
 		//print_r($this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>1) ) ));
 		//	echo "</pre>";die;	
 	}
 
+	public function index2() {
+	
+		$this->set('pago',$this->paginate('Pago'));
+		$this->Cargo->recursive = 0;
+			$this->Pago->recursive= 0;
+		$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>0) ) ));
+
+        //add->set('pagos', $this->Paginator->paginate());
+		//$this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) ) ));
+        //$options = array('conditions' => array('Pago.' . $this->Pago->primaryKey => $id));
+		$this->set('pagos', $this->Pago->find('all',array('conditions'=>array('Pago.status'=>0) )));
+
+	//$this->set('cargos', $this->Paginator->paginate());
+
+
+
+
+		//echo "<pre>";
+		//print_r($this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>1) ) ));
+		//	echo "</pre>";die;
+
+	}
+
 
 	public function pagados() {
 		$this->Cargo->recursive = 0;
+
+
 	//$this->set('cargos', $this->Paginator->paginate());
 	$this->set('cargos', $this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>1) ) ));	
+
 		//echo "<pre>";
 		//print_r($this->Cargo->find('all',array('conditions'=>array('Cargo.status'=>1) ) ));
 		//	echo "</pre>";die;	

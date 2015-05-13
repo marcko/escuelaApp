@@ -62,6 +62,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<li><?php echo $this->Html->link('Cargos',array('controller'=>'cargos','action'=>'index')); ?></li>
 					
 					<li><?php echo $this->Html->link('Plan estudio',array('controller'=>'PlanEstudios','action'=>'index')); ?></li>
+						<li><?php echo $this->Html->link('Entrada/Salida',array('controller'=>'cargos','action'=>'index2')); ?></li>
 				</ul>
 			</div>
 		</td><td><?php echo $this->Html->link('Cerrar sesion',array('controller'=>'usuarios','action'=>'logout')); ?></td></tr></table>

@@ -49,8 +49,13 @@
 		<!--	<?php echo $this->Html->link($cargo['FormaPago']['nombre'], array('controller' => 'forma_pagos', 'action' => 'view', $cargo['FormaPago']['id'])); ?>-->
 		<?php echo $cargo['FormaPago']['nombre']; ?>&nbsp;
 		</td>
-		<td><?php echo $cargo['Cargo']['abono']; ?>&nbsp;</td>
-		<td><?php echo $cargo['Cargo']['cargo']; ?>&nbsp;</td>
+		<td><?php echo $abono = $cargo['Cargo']['abono'];
+				$abononum = (int)$abono;
+		 ?>&nbsp;</td>
+		<td><?php echo $cargod = $cargo['Cargo']['cargo'];
+				$cargodnum = (int)$cargod;
+
+		 ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cargo['Cargo']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cargo['Cargo']['id'])); ?>
