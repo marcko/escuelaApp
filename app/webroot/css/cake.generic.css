@@ -28,6 +28,7 @@ body {
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
+	width: 100%;
 }
 a {
 	color: #003d4c;
@@ -181,15 +182,18 @@ p {
 div.form,
 div.index,
 div.view {
-	float:right;
-	width:76%;
+	
+	width:70%;
 	border-left:1px solid #666;
 	padding:10px 2%;
+	display:inline-block;
+	
 }
 div.actions {
-	float:right;
+    float: left;
 	width:16%;
 	padding:10px 1.5%;
+	display:inline-block;
 }
 div.actions h3 {
 	padding-top:0;

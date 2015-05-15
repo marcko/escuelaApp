@@ -44,8 +44,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
 		</div>
-		<div id="content">
-		<div id="content" style="width: 1260px; height: 590px">
+		<div id="content" style="width: 100%; height: 590px">
 		<table><tr><td>
 		<?php
 		#if($this->Session->check('usuario') ){}

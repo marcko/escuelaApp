@@ -1,3 +1,29 @@
+<div class="actions">
+	<h3><?php echo __('Acciones'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Listar Cargos'), array('controller' => 'cargos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Agregar Cargos'), array('controller' => 'cargos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Depositos'), array('controller' => 'depositos', 'action' => 'index')); ?></li> 
+		<li><?php echo $this->Html->link(__('Listar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Agregar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Conceptos'), array('controller' => 'conceptos', 'action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Imprimir Ingresos'), array('controller' => 'cargos', 'action' => 'viewPdf2')); ?></li>
+		<!--<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'cargos', 'action' => '')); ?></li>-->
+<!--
+<li><?php echo $this->Html->link(__('info'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Nuevo Cargo'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Alumnos'), array('controller' => 'alumnos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Alumno'), array('controller' => 'alumnos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Conceptos'), array('controller' => 'conceptos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Concepto'), array('controller' => 'conceptos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva Forma Pago'), array('controller' => 'forma_pagos', 'action' => 'add')); ?> </li>
+	-->	
+	</ul>
+</div>
+
+
 <div class="cargos index">
 	<h2><?php echo __('Cargos'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
@@ -68,27 +94,5 @@
 
 	
 </div>
-<div class="actions">
-	<h3><?php echo __('Acciones'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Listar Cargos'), array('controller' => 'cargos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Agregar Cargos'), array('controller' => 'cargos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Listar Depositos'), array('controller' => 'depositos', 'action' => 'index')); ?></li> 
-		<li><?php echo $this->Html->link(__('Listar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Agregar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar Conceptos'), array('controller' => 'conceptos', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Imprimir Ingresos'), array('controller' => 'cargos', 'action' => 'viewPdf2')); ?></li>
-		<!--<li><?php echo $this->Html->link(__('Agregar Conceptos'), array('controller' => 'cargos', 'action' => '')); ?></li>-->
-<!--
-<li><?php echo $this->Html->link(__('info'), array('controller' => 'conceptos', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Nuevo Cargo'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar Alumnos'), array('controller' => 'alumnos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Alumno'), array('controller' => 'alumnos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Listar Conceptos'), array('controller' => 'conceptos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Concepto'), array('controller' => 'conceptos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Listar Forma Pagos'), array('controller' => 'forma_pagos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Forma Pago'), array('controller' => 'forma_pagos', 'action' => 'add')); ?> </li>
-	-->	
-	</ul>
-</div>
+
+
