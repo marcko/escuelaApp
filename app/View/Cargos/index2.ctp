@@ -88,5 +88,6 @@
 
 </tbody>
 		</table>
-		<button><?php echo $this->Html->link(__('Imprimir'), array('controller' => 'cargos', 'action' => 'viewPdf3')); ?></button>
+		<li><?php echo $this->Html->link(__('Imprimir'), array('controller' => 'cargos', 'action' => 'viewPdf3')); ?></li>
+	
 </div>
