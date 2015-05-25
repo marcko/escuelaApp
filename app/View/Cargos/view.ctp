@@ -56,10 +56,10 @@
 			&nbsp;
 	--><?php 
 	$status;
- if ($cargo['Cargo']['status'] == 1){
-           echo $status = 'Pendiente';}
+ if (($cargo['Cargo']['cargo'])-($cargo['Cargo']['abono']) == 0){
+           echo $status = 'Pagado';}
         else{
-           echo $status = 'Pagado';
+           echo $status = 'Pendiente';
         
                 
         

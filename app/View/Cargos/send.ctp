@@ -24,7 +24,7 @@
 
 <div class="jumbotron">
 	<div class="container">
-		<h1>Se ha enviado la factura</h1>
+		<h2>Se ha enviado la solicitud de factura</h2>
 		
 	</div>
 </div>

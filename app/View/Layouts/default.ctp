@@ -42,7 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	
 	<div id="container">
 		<div id="header">
-			UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
+			UNIVERSIDAD JOSÉ MARTÍ DE LATINOAMÉRICA
 		</div>
 		<div id="content" style="width: 100%; height: 590px">
 		<table><tr><td>

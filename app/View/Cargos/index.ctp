@@ -64,10 +64,10 @@
 		<td><?php echo $cargo['Cargo']['modified']; ?>&nbsp;</td>
 		<td><?php 
 		/*echo h($cargo['Cargo']['status']); */
-		 if ($cargo['Cargo']['status'] == 0){
-			echo 'Pendiente';}
+		 if (($cargo['Cargo']['cargo'])-($cargo['Cargo']['abono']) == 0){
+			echo 'Pagado';}
 		else{
-			echo 'Pagado';
+			echo 'Pendiente';
 		}
 		
 		?>&nbsp;</td>

@@ -54,7 +54,7 @@ $html .='
 <h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
 <img src="img/logo.jpg" alt="HTML tutorial" style="width:60px;height:60px;margin-left:20px;"></h1>';
 $html .='
-<h1>Detalle de cargos</h1>
+<h1>Recibo de Pago</h1>
 <table class="table">
     <tbody>
           <tr class="active">
@@ -90,7 +90,7 @@ $html .='
             <th>'.$formaPago.'</th>
            </tr>
             <tr class="active">
-            <th><h3>Abono</h3></th>
+            <th><h3>Importe Recibido</h3></th>
             <th>'.$abono.'</th>
            </tr>
             <tr class="active">
@@ -100,7 +100,14 @@ $html .='
     </tbody>
 </table>
 ';
-
+        $html.='
+        <div class="firmas">
+     <h2>Alumno</h2>
+     <h2>______________________________________</h2>
+      <h2>Administracion</h2>
+      <h2>______________________________________</h2>
+                </div>
+        ';
 
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 

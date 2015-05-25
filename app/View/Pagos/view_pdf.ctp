@@ -75,9 +75,9 @@ img{
 </style>';
 $html .='
 
-<h1>UNIVERSIDAD JOSÉ MARTÍN DE LATINOAMERICA
+<h1>UNIVERSIDAD JOSÉ MARTÍ DE LATINOAMÉRICA
 <img src="img/logo.jpg" alt="HTML tutorial" style="width:60px;height:60px;margin-left:20px;"></h1>
-<h1>Recibo de Pago</h1>
+<h1>Notificación de Pago</h1>
 <table class="table table-hover">
 	<thead>
 		<tr>
@@ -108,15 +108,8 @@ $html .='
 	</tbody>
 </table>
 ';
-	$html.='
-	<div class="firmas">
-     <h2>Alumno</h2>
-     <h2>______________________________________</h2>
-      <h2>Administracion</h2>
-      <h2>______________________________________</h2>
-
-		</div>
-	';
+// editado CENA 18/05/15
+$html.='';
 ////////////////////////////////////// end Get course data //////////////////////////////////////
 
 ////////////////////////////////////// CakePHP interaction ////////////////////////////////////// 
@@ -131,7 +124,6 @@ $tcpdf->SetAutoPageBreak( false );
 $tcpdf->setHeaderFont(array($textfont,'',20));
 $tcpdf->xheadercolor = array(150,0,0);
 //$tcpdf->Image('img/logo.jpg', 15, 140, 75, 113, 'JPG', 'http://www.tcpdf.org', '', true, 150, '', false, false, 1, false, false, false);
-
 
 // add a page (required with recent versions of tcpdf)
 $tcpdf->AddPage();

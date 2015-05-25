@@ -397,8 +397,9 @@ $mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$s
 				$Email->template('welcome');
 				$Email->emailFormat('html');
 				$Email->viewVars(array("value" => $mensaje));
-				$Email->to('cnavarro.itnl@gmail.com');
-				$Email->cc(['cnavarro@orangenbaum.com','marco.itnl@hotmail.com']);
+				$Email->to('administracion@josemarti.edu.mx');
+				$Email->cc(['cnavarro@orangenbaum.com','osualdogam@gmail.com']);
+			//	$Email->cc('osualdogam@gmail.com');
 				$Email->subject("Factura ".$nombre."__".$id);
 				$Email->send();
 								

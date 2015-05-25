@@ -23,54 +23,69 @@
 
 /** General Style Info **/
 body {
-	background: #DAA520;
-	color: #cd3333;
-	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-	font-size:12px;
+
+	
+	background: #A10D03; /**FONDO QUE ESTA DETRAS DE LAS LETRAS DEL TITULO**/
+	color: #000000;      /**LETRAS DEL TITULO DE LA FACULTAD**/
+	font-family:arial;
+	font-size:90%;
 	margin: 0;
-	width: 100%;
+
+	
+
 }
+
+
+
+
+
+
 a {
-	color: #003d4c;
+	color: #000000;  /** LETRAS "CERRAR SESION"**/
 	text-decoration: underline;
 	font-weight: bold;
+
 }
 a:hover {
-	color: #367889;
+	color: #FF0000;  /**LETRAS "CERRAR SESION" CUANDO SE PONE EL MOUSE ARRIBA **/
 	text-decoration:none;
 }
 a img {
 	border:none;
 }
-h1, h2, h3, h4 {
-	font-weight: normal;
+h1, h2, h3, h4,h5 {
+	font-weight: bolder;
 	margin-bottom:0.5em;
 }
-h1 {
+h1 {                      /**estilos**/
 	background:#fff;
 	color: #003d4c;
 	font-size: 100%;
 }
+
 h2 {
-	font-weight:bold;
-	color: #AD2B1F;
-	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
-	font-size: 150%;
+	font-weight:bolder;  /**LETRAS DE SUB-TITULO PARA TODAS LAS PAGINAS DE LOS BOTONES DE MENU (Materias,Maestros,Ciclo Escolar,Programa,Activo Fijo,Pagos,Cargos,Plan Estudio) **/
+	color: #000000;
+	font-family:'arial','arial', helvetica, arial, sans-serif;
+	font-size: 130%;
 	text-align: center;
 }
-h3 {
-	color: #2c6877;
-	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
-	font-size: 165%;
+h3 {                    /**estilos**/
+	color: #fff;
+	font-family:arial;
+	font-size: 200%;
 }
 h4 {
-	color: #993;
+	color: #fff;    /**estilos**/
 	font-weight: normal;
 }
-ul, li {
-	margin: 5px;
+
+
+
+ul, li {               /**VIÑETAS; CAMBIA TODDO EL ESTILO DE LAS VIÑETAS DE LA PAGINA(MARGEN, SE LE PUEDE AGREGAR MAS CAMBIOS SI LO DESEAM)**/
+	margin: 0 12px;
 }
-p {
+p {                   /**PARRAFOS; CAMBIA TODO EL ESTILO DE PARRAFOS DE LA PAGINA (TOP,BOTTOM,RIGHT,LEFT)**/
 	margin: 0 0 1em 0;
 }
 
@@ -79,51 +94,51 @@ p {
 	
 	#lista {
 	
-	list-style-type: none; /*quita biñetas*/
+	list-style-type: none;/**NU**/
 	padding:0;
 	position:relative;
 	margin: 0 auto;
 	padding:2px;
-	
-	
+
 	}
 	
-	#lista li{
+	#lista li{  /**BOTONES DE MENUS (ALUMNO,MATERIAS,MAESTROS,CICLO ESCOLAR,PROGRAMA,ACTIVO FIJO,PAGOS,CARGOS,PLAN DE ESTUDIOS**/
+                /**BORDE DEL BOTON, FONDE DEL BOTON, ALINEACION DEL BOTON, ALINEACION DEL TEXTO DEL BOTON, FUENTE DE LETRA   **/	
+                /**TEXTO DEL BOTON, EL RADIO DEL BORDE DE EL BOTON, LA POSICION, EL TIPO DE EDICION DE LETRA (NORMAL,ITALIC,BOLD) **/
 	border: none;
-	background: #CD3320;
+	background: #D7C699;
 	float: left;
 	text-align: center;
-	font-family: fantasy;
-	border-radius: 5px;
+	font-family: arial;
+	border-radius: 45px;
 	position: relative;
 	/*right: 50%;*/
-	font-weight: bold;
+	font-weight: normal;
 	display: inline;
 	padding: inherit;
 	
-	
 	}
 	
-	#div-lista{
+	#div-lista{ /** EDITA EL ANCHO DE LA ZONA DE BOTONES DE MENUS, EL MARGEN DE SEPARACION ENTRE ELLOS, Y SU TAMAÑO DE FUENTE EN ESE ORDEN**/
 	    width:100%;
-	    height: 100%;
-	    margin: 0 auto;
-	    font-size: 18px;
+	    margin: 0 auto ;
+	    font-size: 16px;
 
 	}
 	
 	#div-lista li a{
 		display:  block;
-		text-decoration: none; /*Quita el subrayado*/
-		color: #DAA520;
+		text-decoration: none; /**PARA ELEGIR SI PONER UN SUBRAYADO EN EL TEXTO DEL BOTON(NO RECOMENDABLE SE VE FEO**/
+		color: #000000;        /**COLOR DE LAS LETRAS DENTRO DE LOS BOTONES**/
 		
 	    
 	}
 	
-	#div-lista li a:hover{
-	    color: #DAA520;
-	    background: #0383A0;
-	    border-radius: 5px;
+	#div-lista li a:hover{  /**EDITA LAS PROPIEDADES DE LOS BOTONES DE MENU CUANDO EL MOUSE SE PONE SOBRE ELLOS**/
+	   
+	    color: #FFFFFF;     /**COLOR DE TEXTO EN LOS BOTONES AL PASAR EL MOUSE SOBRE EL**/
+	    background: #D7C699;/**COLOR DE FONDO EN LOS BOTONES AL PASAR EL MOUSE SOBRE EL**/
+	    border-radius: 5px; /**RADIO DEL FONDO QUE CAMBIARA DE COLOR AL PASAR EL MOUSE SOBRE EL BOTON **/
 	    
 	}
 
@@ -133,18 +148,19 @@ p {
 /** Layout **/
 #container {
 	text-align: left;
-	
+
 }
 
-#header{
-	padding: 10px 20px;
-	font-weight: bold;
-	text-align: center;
-	font-size: 20px;
+#header{                    /**PROPIEDADES TITULO(NOMBRE DE ESCUELA) **/
+	padding: 10px 20px;     /**DESPALAZAMIENTO TITULO**/
+	font-weight: bold;      /**ESTILO DE LETRA TITULO**/
+	text-align: center;     /**ALINEACION DEL TITULO**/
+	font-size: 20px;        /**TAMAÑO DEL TITULO**/
+
 }
-#header h1 {
+#header h1 { 
 	line-height:20px;
-	background: #003d4c url('../img/cake.icon.png') no-repeat left;
+	background: #ff0000 url('../img/cake.icon.png') no-repeat left;
 	color: #fff;
 	padding: 0px 30px;
 	
@@ -154,6 +170,7 @@ p {
 	background: #003d4c;
 	font-weight: normal;
 	text-decoration: none;
+
 }
 #header h1 a:hover {
 	color: #fff;
@@ -181,35 +198,35 @@ p {
 /** containers **/
 div.form,
 div.index,
-div.view {
-	
-	width:70%;
-	border-left:1px solid #666;
-	padding:10px 2%;
-	display:inline-block;
-	
+div.view {        /**ESTILO CONTENIDO CENTRAL**/
+	float:right;  /**ALINEA EL CONTENIDO QUE MUESTRE CADA BOTON EN EL DIV CENTRAL DE LA PAGINA(EN ESTE CASO A LA DERECHA)**/
+	width:76%;    /**ES EL TAMAÑO DESIGNADO PARA QUE SE MUESTRE EL CONTENIDO CENTRAL DE LA PAGINA**/
+	border-left:1px solid #666; /**BORDE DEL CONTENIDO CENTRAL**/
+	padding:10px 2%;            /**DESPLAZAMIENTO DEL CONTENIDO (TOP,RIGHT)**/
+    background: #fff;
 }
-div.actions {
-    float: left;
-	width:16%;
-	padding:10px 1.5%;
-	display:inline-block;
+div.actions {    /**EDITA LOS BOTONES DEL INDEX(BOTONES A LA IZQUIERDA DE CADA SECCION**/
+	
+	float:left;  /**POSICION DE LOS BOTONES EN EL INDEX A LA IZQUIERA DE CADA SECCION(IZQUIERDA,DERECHA O CENTRO)**/
+	width:16%;   /**TAMAÑO DE LOS BOTONES DEL INDEX**/
+	padding:10px 1.5%; /**DESPLAZAMIENTO DE BOTONES DEL INDEX (TOP,RIGHT)**/
 }
-div.actions h3 {
-	padding-top:0;
-	color:#777;
+div.actions h3 { /**TEXTO "Acciones"**/
+	padding-top:0; /**DESPLAZAMIENTO DE TEXTO "Acciones**/
+	color:#FF0000; /**COLOR DE TEXTO "Acciones**/
+	font-weight: normal;
 }
 
 
 /** Tables **/
-table {
+table {  /**ESTILO DE TABLAS**/
 	border-right:0;
 	clear: both;
 	color: #333;
 	margin-bottom: 10px;
 	width: 100%;
 }
-th {
+th { /**LINEA SOBRE CONTENIDO CENTRAL**/
 	border:0;
 	border-bottom:2px solid #555;
 	text-align: left;
@@ -220,18 +237,18 @@ th a {
 	padding: 2px 4px;
 	text-decoration: none;
 }
+
 th a.asc:after {
 	content: ' ⇣';
 }
 th a.desc:after {
 	content: ' ⇡';
 }
-table tr td {
+table tr td {  /**TEXTO DENTRO DE LAS TABLAS DEL CONTENIDO**/
 	padding: 6px;
-	background: #F0F0F0
 	text-align: left;
 	vertical-align: top;
-	border-bottom:1px solid #DDD;
+	border-bottom:1px solid #ddd;
 }
 table tr:nth-child(even) {
 	background: #f9f9f9;
@@ -278,7 +295,7 @@ table td.actions a {
 	border-left: 0;
 }
 .paging > span:hover {
-	background: #efefef;
+	background: #fff;
 }
 .paging .prev {
 	border-left: 1px solid #ccc;
@@ -310,7 +327,7 @@ dl {
 }
 dl dd:nth-child(4n+2),
 dl dt:nth-child(4n+1) {
-	background: #f4f4f4;
+	background: #FFFFFF; /**COLOR DE SALTO DE FILAS EN RESULTADO DESPLEGADO DE BOTONES VER EN CUALQUIER SECCION(BLANCO)**/
 }
 
 dt {
@@ -337,10 +354,12 @@ fieldset {
 	margin-bottom: 1em;
 	padding: 16px 10px;
 }
-fieldset legend {
-	color: #e32;
-	font-size: 160%;
-	font-weight: bold;
+
+fieldset legend { /** TEXTO DE SUBTITULOS EN TODAS LAS SECCIONES QUE INCLUYAN AGREGAR ALGO NUEVO(EJE.NUEVA MATERIA,NUEVO TETRAMESTRE,ETC)**/
+	color: #000000;
+	font-size: 120%;
+	font-weight: bolder;
+	font-family: arial;
 }
 fieldset fieldset {
 	margin-top: 0;
@@ -376,19 +395,23 @@ form div.submit {
 	clear: both;
 	margin-top: 10px;
 }
-label {
+label {     /**ETIQUETAS DE FORMULARIOS DE NUEVO REQUERIMIENTO(EJE.NUEVA MATERIA,ETC)**/
 	display: block;
 	font-size: 110%;
 	margin-bottom:3px;
+	font-family: arial;
+
 }
-input, textarea {
+input, textarea {  /**TEXTO DENTRO DE CAJAS DE NUEVO REQUERIMIENTO**/
 	clear: both;
-	font-size: 140%;
-	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+	font-size: 80%;
+	font-family: arial;
 	padding: 1%;
-	width:98%;
-}
-select {
+	width:50%;
+	
+	}
+
+select {          /**TEXTO DENTRO DE LOS MENU LIST(BARRAS DESPLEGABLES)**/
 	clear: both;
 	font-size: 120%;
 	vertical-align: text-bottom;
@@ -425,21 +448,20 @@ input[type=submit] {
 	font-size: 110%;
 	width: auto;
 }
-form .submit input[type=submit] {
-	background:#62af56;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230));
-	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230);
-	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230);
-	border-color: #2d6324;
-	color: #fff;
-	text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px;
-	padding: 8px 10px;
+form .submit input[type=submit] {  /**DISEÑO DE LOS BOTONES AGREGAR**/
+	
+	background-image: -webkit-linear-gradient(top, #1C7F1C, #1C7F1C); /**FONDO DE BOTONES POR DEFAULT**/
+	border-color: #000;           /**BORDE DE BOTONES AGREGAR**/
+	color: #FFF;                  /**COLOR DE TEXTO EN EL BOTON AGREGAR**/
+	text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px; /**SOMBRA DE TEXTO**/
+	padding: 8px 10px;            /**DESPLAZAMIENTOS DE BOTONES AGREGAR**/
 }
-form .submit input[type=submit]:hover {
-	background: #5BA150;
+form .submit input[type=submit]:hover { /**PROPIEDADES DEL BOTON AGREGAR O SUBMIT CUANDO EL MOUSE SE PONE SOBRE ELLOS**/
+	background: #47E92E;  /**COLOR QUE TOMA EL BOTON CUANDO EL MOUSE ESTA SOBRE EL**/
 }
 /* Form errors */
-form .error {
+form .error {        /**PROPIEDADES DE LOS ERRORES QUE SE DESPLIEGUEN , APARTIR DE AQUI EL CODIGO SON COLORES DE LETRAS Y TIPOS DE TEXTOS EN LOS ERRORES QUE PUEDAN GENERAR LA MALA SINTAXIS DEL PROGRAMA
+	**/
 	background: #FFDACC;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -809,3 +831,4 @@ pre {
 #url-rewriting-warning {
 	display:none;
 }
+/**VALA**/
