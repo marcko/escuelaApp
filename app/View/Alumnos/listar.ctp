@@ -21,7 +21,7 @@
 				<th>Apellidos</th>				
 				<th>Carrera</th>
 				<th>Correo</th>
-				<th>Grado</th>
+			<!--	<th>Grado</th>-->
 			</tr>
 		</thead>
 	<?php 
@@ -54,7 +54,7 @@
 				
 				<td><?php echo $carreraAlumno; ?></td>
 				<td><?php echo $correAlumno; ?></td>
-				<td><?php echo $carreraTipo; ?></td>
+			
 			</tr>
 		</tbody>
 		
