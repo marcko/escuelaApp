@@ -473,6 +473,11 @@ $mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$s
 		return $name;
 	}
 
+	public function filtro(){
+
+		$this->set($this->request->data[][]);
+	}
+
 
 
 }

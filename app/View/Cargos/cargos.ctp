@@ -10,7 +10,7 @@
 </style>
 
 <div id = "searchDiv">
-	<form id = "formBuscar" method = "post" action = "/proyecto/cargos/showCargos">
+	<form id = "formBuscar" method = "post" action = "/escuelaApp/cargos/showCargos">
 		Buscar por mes
 
 		<select id = "mes" name = "mes">

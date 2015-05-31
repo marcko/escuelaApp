@@ -1,3 +1,12 @@
+
+<form method="post" action="/escuelaApp/cargos/filtro">
+
+	<input type="text" name="data[Cargo][fecha_pago]">
+	<input type="submit">	
+
+	
+</form>
+
 	<div>
 	<h2><?php echo __('Entrada'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

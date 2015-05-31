@@ -234,4 +234,8 @@ class AlumnosController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+	public function listar(){
+
+			$this->set('Alumno', $this->Alumno->find('all'));
+	}
 }

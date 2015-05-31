@@ -98,4 +98,7 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Ingresar nuevo Alumno'), array('action' => 'add')); ?></li>
 	</ul>
+	<ul>
+		<li><?php echo $this->Html->link(__('Listar Alumnos'), array('action' => 'listar')); ?></li>
+	</ul>
 </div>
