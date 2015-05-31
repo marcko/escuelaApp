@@ -9,7 +9,6 @@
 		<option value="3">Doctorado</option>
 		
 	</select>
-<input type="date" name="fecha" style="width:30%">
 <input type="submit" value="buscar">
 </form>
 
