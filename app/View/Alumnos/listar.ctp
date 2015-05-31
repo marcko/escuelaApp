@@ -9,9 +9,10 @@
 		<option value="3">Doctorado</option>
 		
 	</select>
-
-	<input type="submit" value="buscar">
+<input type="date" name="fecha" style="width:30%">
+<input type="submit" value="buscar">
 </form>
+
 	<table class="table table-hover">
 	
 		<thead>
