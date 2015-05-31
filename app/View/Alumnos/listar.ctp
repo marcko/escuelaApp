@@ -6,23 +6,42 @@
 			<tr>
 				<th>Matricula</th>
 				<th>Nombre</th>
+				<th>Apellidos</th>				
 				<th>Carrera</th>
+				<th>Correo</th>
 			</tr>
 		</thead>
 	<?php 
+	$carreraTipo = null;
 
 	foreach ($Alumno as $value):
-
-	$nombreAlumno = $value['Alumno']['nombre'];
 	$matriculaAlumno = $value['Alumno']['matricula'];
+	$nombreAlumno = $value['Alumno']['nombre'];
+	$apellPatAlumno = $value['Alumno']['ap_pat'];
+	$apellMatAlumno = $value['Alumno']['ap_mat'];
+	$apellMatAlumno = $value['Alumno']['ap_mat'];
+	$correAlumno = $value['Alumno']['correo'];
 	$carreraAlumno = $value['Carrera']['nombre'];
+	if ( $value['Carrera']['tipo'] == 1){
+
+		$carreraTipo = "Licenciatura";
+	}else if( $value['Carrera']['tipo'] == 2){
+
+		$carreraTipo = 	"Maestria";
+	}else{
+
+		$carreraTipo = "Doctorado";
+	}
 	?>
 		<tbody>
 			<tr>
 			<td><?php echo $matriculaAlumno; ?></td>
 				<td><?php echo $nombreAlumno; ?></td>
+				<td><?php echo $apellPatAlumno." ".$apellMatAlumno; ?></td>
 				
 				<td><?php echo $carreraAlumno; ?></td>
+				<td><?php echo $correAlumno; ?></td>
+				<td><?php echo $carreraTipo; ?></td>
 			</tr>
 		</tbody>
 		

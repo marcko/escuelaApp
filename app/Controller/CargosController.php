@@ -475,7 +475,7 @@ $mensaje = array($nombre,$created,$concepto,$fechaPago,$descripcion,$modified,$s
 
 	public function filtro(){
 
-		$this->set($this->request->data[][]);
+		$this->set('filtro',$this->request->data['cargo'][]);
 	}
 
 
