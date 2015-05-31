@@ -2,6 +2,7 @@
 <form method="post" action="/escuelaApp/alumnos/listarOpcion">
 	Grado de Estudios
 	<select name="opciones" id="termbox">
+	<option value="0">Seleccionar</option>
 		<option value="1">Licenciatura</option>
 		<option value="2">Maestria</option>
 		<option value="3">Doctorado</option>
