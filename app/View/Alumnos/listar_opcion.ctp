@@ -1,5 +1,4 @@
-
-<div class="tetramestres form">
+	<div class="tetramestres form">
 <form method="post" action="/escuelaApp/alumnos/listarOpcion">
 	Grado de Estudios
 	<select name="opciones" id="termbox">
@@ -11,6 +10,7 @@
 
 	<input type="submit" value="buscar">
 </form>
+
 	<table class="table table-hover">
 	
 		<thead>

@@ -238,4 +238,10 @@ class AlumnosController extends AppController {
 
 			$this->set('Alumno', $this->Alumno->find('all'));
 	}
+	public function listarOpcion(){
+			$data = $this->request->data;
+			$opciones = $data['opciones'];
+
+			$this->set('Alumno', $this->Alumno->find('all',array('conditions'=>array('Carrera.tipo'=>$opciones))));
+	}
 }
